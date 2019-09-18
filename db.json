@@ -1,0 +1,211 @@
+{
+  "details": [
+    {
+      "first_name": "wewasdfsdfs",
+      "middle_name": "dhdcahcjs",
+      "last_name": "kdfbskcso",
+      "state_of_origin": "ogun",
+      "local_govt_of_residence": "siufisdfsui",
+      "residential_address": "udgakusdhaoshdiaus",
+      "date_of_birth": "19/04/2019",
+      "email": "lalakuku@gmail.com",
+      "phone_No": "07035678345",
+      "voters_card_id": "jni345556576757",
+      "password": "y2u3t4j55",
+      "id": 1
+    },
+    {
+      "first_name": "nfgn",
+      "middle_name": "fgnfn",
+      "last_name": "fnfnf",
+      "state_of_origin": "fnfgn",
+      "id": 2
+    },
+    {
+      "first_name": "nfgn",
+      "middle_name": "fgnfn",
+      "last_name": "fnfnf",
+      "state_of_origin": "fnfgn",
+      "id": 3
+    },
+    {
+      "first_name": "nfgn",
+      "middle_name": "fgnfn",
+      "last_name": "fnfnf",
+      "state_of_origin": "fnfgn",
+      "id": 4
+    },
+    {
+      "first_name": "nfgn",
+      "middle_name": "fgnfn",
+      "last_name": "fnfnf",
+      "state_of_origin": "fnfgn",
+      "id": 5
+    },
+    {
+      "first_name": "nfgn",
+      "middle_name": "fgnfn",
+      "last_name": "fnfnf",
+      "state_of_origin": "fnfgn",
+      "id": 6
+    },
+    {
+      "first_name": "nfgn",
+      "middle_name": "fgnfn",
+      "last_name": "fnfnf",
+      "state_of_origin": "fnfgn",
+      "id": 7
+    },
+    {
+      "first_name": "nfgn",
+      "middle_name": "fgnfn",
+      "last_name": "fnfnf",
+      "state_of_origin": "fnfgn",
+      "id": 8
+    },
+    {
+      "first_name": "vb",
+      "middle_name": "cbc",
+      "last_name": "sfr",
+      "state_of_origin": "dgh",
+      "id": 9
+    },
+    {
+      "first_name": "vb",
+      "middle_name": "cbc",
+      "last_name": "sfr",
+      "state_of_origin": "dgh",
+      "id": 10
+    },
+    {
+      "first_name": "fc",
+      "middle_name": "cd",
+      "last_name": "g",
+      "state_of_origin": "g",
+      "local_govt_of_residence": "g",
+      "residential_address": "g",
+      "date_of_birth": "g",
+      "email": "g",
+      "phone_No": "gg",
+      "voters_card_id": "g",
+      "id": 11
+    }
+  ],
+  "candidates": [
+    {
+      "first_name": "wewasdfsdfs",
+      "middle_name": "dhdcahcjs",
+      "last_name": "kdfbskcso",
+      "state_of_origin": "ogun",
+      "local_govt_of_residence": "siufisdfsui",
+      "residential_address": "udgakusdhaoshdiaus",
+      "date_of_birth": "19/04/2019",
+      "email": "lalakuku@gmail.com",
+      "phone_No": "07035678345",
+      "voters_card_id": "jni345556576757",
+      "political_party": "apc",
+      "party_id_number": "234275482345",
+      "position_contesting_for": "gfjcshdh",
+      "pasword": "pass298495",
+      "id": 1
+    },
+    {
+      "name": "hope",
+      "id": 2
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "state_of_origin": "",
+      "local_govt_of_residence": "",
+      "residential_address": "",
+      "date_of_birth": "",
+      "email": "",
+      "phone_No": "",
+      "voters_card_id": "",
+      "political_party": "",
+      "position_contesting_for": "",
+      "id": 3
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "state_of_origin": "",
+      "local_govt_of_residence": "",
+      "residential_address": "",
+      "date_of_birth": "",
+      "email": "",
+      "phone_No": "",
+      "voters_card_id": "",
+      "political_party": "",
+      "position_contesting_for": "",
+      "id": 4
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "state_of_origin": "",
+      "local_govt_of_residence": "",
+      "residential_address": "",
+      "date_of_birth": "",
+      "email": "",
+      "phone_No": "",
+      "voters_card_id": "",
+      "political_party": "",
+      "party_id_number": "",
+      "position_contesting_for": "",
+      "id": 5
+    },
+    {
+      "first_name": "nfgn",
+      "middle_name": "lkll",
+      "last_name": "kk",
+      "state_of_origin": "kkk",
+      "local_govt_of_residence": "kk",
+      "residential_address": "llll",
+      "date_of_birth": "kk",
+      "email": "kkl",
+      "phone_No": "lll",
+      "voters_card_id": "kkk",
+      "political_party": "llll",
+      "party_id_number": "llll",
+      "position_contesting_for": "lllll",
+      "id": 6
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "state_of_origin": "",
+      "local_govt_of_residence": "",
+      "residential_address": "",
+      "date_of_birth": "",
+      "email": "",
+      "phone_No": "",
+      "voters_card_id": "",
+      "political_party": "",
+      "party_id_number": "",
+      "position_contesting_for": "",
+      "id": 7
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "state_of_origin": "",
+      "local_govt_of_residence": "",
+      "residential_address": "",
+      "date_of_birth": "",
+      "email": "",
+      "phone_No": "",
+      "voters_card_id": "",
+      "political_party": "",
+      "party_id_number": "",
+      "position_contesting_for": "",
+      "id": 8
+    }
+  ]
+}
