@@ -12,21 +12,44 @@
 <body>
   <style>
     body {
-      background-color: green;
+      background-image: url('../img/3387794.jpg')
+    }
+
+    form {
+      text-align: center;
+      font-size: x-large;
+      font-family: serif
     }
 
     h1 {
-      color: aqua;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      color: black;
+      font-family: fantasy;
       text-align: center
     }
 
+    .heading_reset {
+      border-color: rgb(0, 119, 255);
+      border-width: 20px;
+      border-style: unset;
+      border-radius: 150%;
+      background-color: rgb(0, 255, 64);
+    }
+
     h2 {
-      color: cornflowerblue;
-      text-align: center
+      color: rgb(148, 100, 237);
+      text-align: center;
+      font-family: 'Franklin Gothic Medium';
+      text-size-adjust: 170px;
+      font-size: 30px;
+
     }
   </style>
-  <h1>INDEPENDENT ELECTORAL COMMISION</h1>
+  <nav class="navbar navbar-dark bg-dark">
+    <button type="home_button"><a href="C:\Users\kunmie\Desktop\778\election_web\index.html">Home</a></button>
+  </nav>
+  <div class="heading_reset">
+    <h1>INDEPENDENT ELECTORAL COMMISION</h1>
+  </div>
 
   <h2>Register for the upcoming 2023 general elections</h2>
   <form class="needs-validation" novalidate>
@@ -78,8 +101,7 @@
       </div>
       <div class="col-md-12">
         <label for="profile_password">Profile password</label>
-        <input type="text" class="form-control" id="profile_password" placeholder="Profile password" value=""
-          required>
+        <input type="password" class="form-control" id="profile_password" placeholder="Profile password" value="" required>
       </div>
     </div>
     </div>
@@ -115,11 +137,11 @@
         var email = $('#email').val();
         var phone_No = $('#phone_No').val();
         var voters_card_id = $('#voters_card_id').val();
-
+        var profile_password = $('#profile_password').val();
         $.ajax({
           method: 'POST',
           url: 'http://localhost:3000/details',
-          data: { first_name, middle_name, last_name, state_of_origin, local_govt_of_residence, residential_address, date_of_birth, email, phone_No, voters_card_id },
+          data: { first_name, middle_name, last_name, state_of_origin, local_govt_of_residence, residential_address, date_of_birth, email, phone_No, voters_card_id, profile_password },
           success: function (result) {
             console.log(result);
           },
@@ -128,7 +150,7 @@
       })
     })
   </script>
-  <script>
+  <!-- <script>
       // Example starter JavaScript for disabling form submissions if there are invalid fields
       (function () {
         'use strict';
@@ -147,7 +169,7 @@
           });
         }, false);
       })();
-  </script>
+  </script> -->
 
 </body>
 
