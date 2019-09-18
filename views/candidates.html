@@ -36,14 +36,17 @@
     }
 
     h2 {
-      color: cornflowerblue;
+      color: rgb(148, 100, 237);
       text-align: center;
       font-family: 'Franklin Gothic Medium';
       text-size-adjust: 170px;
-      font-size: 150%;
+      font-size: 30px;
 
     }
   </style>
+  <nav class="navbar navbar-dark bg-dark">
+    <button type="home_button"><a href="C:\Users\kunmie\Desktop\778\election_web\index.html">Home</a></button>
+  </nav>
   <div class="heading_reset">
     <h1>INDEPENDENT ELECTORAL COMMISION</h1>
   </div>
@@ -116,7 +119,7 @@
           </div>
           <div class="col-md-12">
             <label for="profile_password">Profile password</label>
-            <input type="text" class="form-control" id="profile_password" placeholder="Profile password" value=""
+            <input type="password" class="form-control" id="profile_password" placeholder="Profile password" value=""
               required>
           </div>
         </div>
@@ -136,12 +139,7 @@
     </div>
   </div>
   <button class="btn btn-primary" type="submit">Submit form</button>
-
-
-  </div>
-
   </form>
-  </div>
 
   <script src="../js/jquery.js"></script>
   <script>
@@ -161,10 +159,11 @@
         var political_party = $('#political_party').val();
         var position_contesting_for = $('#position_contesting_for').val();
         var party_id_number = $('#party_id_number').val();
+        var profile_password = $('#profile_password').val();
 
         $.ajax({
           url: "http://localhost:3000/candidates",
-          method: "post",
+          method: "POST",
           data: {
             first_name,
             middle_name,
@@ -178,7 +177,8 @@
             voters_card_id,
             political_party,
             party_id_number,
-            position_contesting_for
+            position_contesting_for,
+            profile_password
           },
         }).done(function (result) {
           console.log(result);

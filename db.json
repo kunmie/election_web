@@ -89,6 +89,36 @@
       "phone_No": "gg",
       "voters_card_id": "g",
       "id": 11
+    },
+    {
+      "profile_password": "kk;lkm;m",
+      "id": 12
+    },
+    {
+      "profile_password": "iiiiiii",
+      "id": 13
+    },
+    {
+      "profile_password": "ppppp",
+      "id": 14
+    },
+    {
+      "profile_password": "ppppp",
+      "id": 15
+    },
+    {
+      "first_name": "lkl",
+      "middle_name": "nlnln",
+      "last_name": "lnlnl",
+      "state_of_origin": "lnln",
+      "local_govt_of_residence": "lnln",
+      "residential_address": "lnlnln",
+      "date_of_birth": "lnln",
+      "email": "lnln",
+      "phone_No": "lnlnln",
+      "voters_card_id": "lnlnn",
+      "profile_password": "lnlnljbj",
+      "id": 16
     }
   ],
   "candidates": [
@@ -206,6 +236,12 @@
       "party_id_number": "",
       "position_contesting_for": "",
       "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
     }
   ]
 }
