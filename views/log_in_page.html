@@ -80,27 +80,36 @@
         $(document).ready(function () {
             $('form').on('submit', function (e) {
                 e.preventDefault();
-                var voters_card_id = $('#voters_card_id').val();
-                var profile_password = $('#profile_password').val();
-
+                let voters_card_id = $('#voters_card_id').val();
+                let profile_password = $('#profile_password').val();
+                console.log(voters_card_id);
+                
                 $.ajax({
-                    url: "http://localhost:3000/candidates",
+                    url: "http://localhost:3000/candidates?voters_card_id="+voters_card_id,
                     method: "GET",
                     // data: {
                     //     voters_card_id,
                     //     profile_password
                     // },
-                }).done(function (result) {
-                    if ((result.voters_card_id === voters_card_id) && (result.profile_password === profile_password)) {
-                        windows.location.href="/voting_page"
-                    } else {
-                        alert()
-                        console.log('error');
-                    }
+                    success: function (result) {
+                        for (let index = 0; index < result.length; index++) {
+                            const element = result[index];
+                        
+                            console.log(element.voters_card_id);                           
+                        if (voters_card_id == element.voters_card_id && profile_password == element.profile_password) {
+                            document.location = "voting_page.html"
 
-                })
-            });
-        });
+                        } else {
+                            alert("incorrect Password and Voters id No")
+                        //  document.location = "log_in_page.html"
+                        break;
+                        }
+
+                    }
+                    }
+                });
+                 });
+                });
     </script>
     <script>
           // Example starter JavaScript for disabling form submissions if there are invalid fields
