@@ -4,6 +4,7 @@
       "first_name": "wewasdfsdfs",
       "middle_name": "dhdcahcjs",
       "last_name": "kdfbskcso",
+      "gender": "male, female",
       "state_of_origin": "ogun",
       "local_govt_of_residence": "siufisdfsui",
       "residential_address": "udgakusdhaoshdiaus",
@@ -127,6 +128,7 @@
       "middle_name": "dhdcahcjs",
       "last_name": "kdfbskcso",
       "state_of_origin": "ogun",
+      "gender": "male, female",
       "local_govt_of_residence": "siufisdfsui",
       "residential_address": "udgakusdhaoshdiaus",
       "date_of_birth": "19/04/2019",
@@ -242,6 +244,108 @@
     },
     {
       "id": 10
+    },
+    {
+      "first_name": "l;klklkhg",
+      "middle_name": "hghg",
+      "last_name": "hgh",
+      "gender": "male",
+      "state_of_origin": "gj",
+      "local_govt_of_residence": "jgj",
+      "residential_address": "jgjg",
+      "date_of_birth": "jj",
+      "email": "jjg",
+      "phone_No": "jgjg",
+      "voters_card_id": "jjg",
+      "political_party": "jgjg",
+      "party_id_number": "jgjg",
+      "position_contesting_for": "jgjg",
+      "profile_password": "jgjg",
+      "id": 11
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "gender": "male",
+      "state_of_origin": "",
+      "local_govt_of_residence": "",
+      "residential_address": "",
+      "date_of_birth": "",
+      "email": "",
+      "phone_No": "",
+      "voters_card_id": "",
+      "political_party": "",
+      "party_id_number": "",
+      "position_contesting_for": "",
+      "profile_password": "",
+      "id": 12
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "gender": "male",
+      "state_of_origin": "",
+      "local_govt_of_residence": "",
+      "residential_address": "",
+      "date_of_birth": "",
+      "email": "",
+      "phone_No": "",
+      "voters_card_id": "",
+      "political_party": "",
+      "party_id_number": "",
+      "position_contesting_for": "",
+      "profile_password": "",
+      "id": 13
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "gender": "male",
+      "state_of_origin": "",
+      "local_govt_of_residence": "",
+      "residential_address": "",
+      "date_of_birth": "",
+      "email": "",
+      "phone_No": "",
+      "voters_card_id": "",
+      "political_party": "",
+      "party_id_number": "",
+      "position_contesting_for": "",
+      "profile_password": "",
+      "id": 14
+    }
+  ],
+  "office_voted_party": [
+    {
+      "presidency": "pdp,apc",
+      "governor": "dkd",
+      "national_house_of_assembly": "sjd",
+      "house_of_representatives": "ygch",
+      "id": 1
+    },
+    {
+      "president": "apc",
+      "governor": "pdp",
+      "national_house_of_assembly": "apc",
+      "house_of_representatives": "sdp",
+      "id": 2
+    },
+    {
+      "president": "anpp",
+      "governor": "sdp",
+      "national_house_of_assembly": "pdp",
+      "house_of_representatives": "apc",
+      "id": 3
+    },
+    {
+      "president": "pdp",
+      "governor": "pdp",
+      "national_house_of_assembly": "apc",
+      "house_of_representatives": "sdp",
+      "id": 4
     }
   ]
 }
