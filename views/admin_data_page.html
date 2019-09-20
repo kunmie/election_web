@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>admin_data_page</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url('../img/3387794.jpg')
+        }
+
+        form {
+            text-align: center;
+            font-size: x-large;
+            font-family: serif;
+            width: 500px;
+            margin: auto;
+        }
+
+        h1 {
+            color: black;
+            font-family: fantasy;
+            text-align: center
+        }
+
+        #heading_reset {
+            border-color: rgb(0, 119, 255);
+            border-width: 70px;
+            border-style: unset;
+            border-radius: 150%;
+            background-color: rgb(0, 255, 64);
+        }
+
+        h2 {
+            color: rgb(148, 100, 237);
+            text-align: center;
+            font-family: 'Franklin Gothic Medium';
+            text-size-adjust: 170px;
+            font-size: 30px;
+
+        }
+    </style>
+    <nav class="navbar navbar-dark bg-dark">
+        <button type="home_button"><a href="../index.html">Home</a></button>
+    </nav>
+    <div>
+        <h1 id="heading_reset">INDEPENDENT ELECTORAL COMMISION</h1>
+    </div>
+    <h2>Election results and compilations</h2>
+    <form action="" class="main form" id="theresult">
+        <!-- <table class="table table-striped table-dark">
+            <div class="col-md-12">
+                <thead>
+                    <tr>
+                        <th scope="col">S/N</th>
+                        <th scope="col">Candidate Name</th>
+                        <th scope="col">Political party</th>
+                        <th scope="col">Votes</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>chidozie</td>
+                        <td>APC</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>ben</td>
+                        <td>PDP</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>kunle</td>
+                        <td>APGA</td>
+                        <td>13</td>
+                    </tr>
+                </tbody>
+            </div>
+
+        </table> -->
+    </form>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('form').on('submit', function (e) {
+                e.preventDefault();
+                var president = $('#president').val();
+                var governor = $('#governor').val();
+                var national_house_of_assembly = $('#national_house_of_assembly').val();
+                var house_of_representatives = $('#house_of_representatives').val();
+
+                $.ajax({
+                    url: "http://localhost:3000/office_voted_party",
+                    method: "GET",
+                    data: {
+                        president,
+                        governor,
+                        national_house_of_assembly,
+                        house_of_representatives
+                    },
+                    success: function (result) {
+                        let president_PDP = 0; let president_APC = 0; let president_APGA = 0; let president_ANPP = 0; let president_SDP = 0; let governor_PDP = 0; let governor_APC = 0; let governor_APGA = 0; let governor_ANPP = 0; let governor_SDP = 0;
+let thedata = ""; let theresult = document.;
+                        for (let index = 0; index < result.length; index++) {
+                            const element = result[index];
+                            for (let i = 0; i < element.length; i++) {
+                                let counter = element[i];
+                                switch (counter.president) {
+                                    case "APC":
+                                        president_APC++
+                                        break;
+
+                                    case "PDP":
+                                        president_PDP++
+                                        break;
+
+                                    case "SDP":
+                                        president_SDP++
+                                        break;
+
+                                    case "APGA":
+                                        president_APGA++
+                                        break;
+
+                                    case "ANPP":
+                                        president_ANPP++
+                                        break;
+
+                                    default:
+                                        break;
+                                }
+                                switch (counter.governor) {
+                                    case "APC":
+                                        governor_APC++
+                                        break;
+
+                                    case "PDP":
+                                        governor_PDP++
+                                        break;
+
+                                    case "SDP":
+                                        governor_SDP++
+                                        break;
+
+                                    case "APGA":
+                                        governor_APGA++
+                                        break;
+
+                                    case "ANPP":
+                                        governor_ANPP++
+                                        break;
+
+                                    default:
+                                        break;
+                                }
+
+
+
+                            }
+
+
+
+                        }
+
+                        thedata += `  <table class="table table-striped table-dark">
+            <div class="col-md-12">
+                <thead>
+                    <tr>
+                        <th scope="col">S/N</th>
+                        <th scope="col">Candidate Name</th>
+                        <th scope="col">Political party</th>
+                        <th scope="col">Votes</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>chidozie</td>
+                        <td>APC</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>ben</td>
+                        <td>PDP</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>kunle</td>
+                        <td>APGA</td>
+                        <td>13</td>
+                    </tr>
+                </tbody>
+            </div>
+
+        </table>`
+
+        theresult.html(thedata);
+                    }
+
+
+                })
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

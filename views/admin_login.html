@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login Page</title>
+    <title>Admin Login</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 
@@ -52,18 +52,18 @@
     <div class="heading_reset">
         <h1>INDEPENDENT ELECTORAL COMMISION</h1>
     </div>
-    <form class="needs-validation" novalidate>
+    <h2>Administrative Login</h2>
+    <form class="needs-validation" id="form" novalidate>
         <div class="container">
             <div class="form-row">
                 <div class="col-md-12" id="dawg">
-                    <label for="voters_card_id">Voters Card ID</label>
-                    <input type="text" class="form-control" id="voters_card_id" placeholder="Voters Card ID" value=""
-                        required>
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="email" value="" required>
                 </div>
                 <div class="col-md-12">
-                    <label for="profile_password">Profile password</label>
-                    <input type="password" class="form-control" id="profile_password" placeholder="Profile password"
-                        value="" required>
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="profile_password" placeholder="Password" value=""
+                        required>
                 </div>
             </div>
         </div>
@@ -78,29 +78,30 @@
     <script src="../js/jquery.js"></script>
     <script>
         $(document).ready(function () {
-            $('form').on('submit', function (e) {
+            $('#form').on('submit', function (e) {
                 e.preventDefault();
-                let voters_card_id = $('#voters_card_id').val();
+                let email = $('#email').val();
                 let profile_password = $('#profile_password').val();
-                // console.log(voters_card_id);
+                console.log(email);
 
                 $.ajax({
-                    url: "http://localhost:3000/details?voters_card_id=" + voters_card_id,
+                    url: "http://localhost:3000/admin_table?profile_password=" + profile_password,
                     method: "GET",
                     // data: {
-                    //     voters_card_id,
+                    //     email,
                     //     profile_password
                     // },
                     success: function (result) {
                         for (let index = 0; index < result.length; index++) {
                             const element = result[index];
 
-                            console.log(element.voters_card_id);
-                            if (voters_card_id == element.voters_card_id && profile_password == element.profile_password) {
-                                document.location = "voting_page.html"
+                            console.log(element.email);
+                            if (email == element.email && profile_password == element.profile_password) {
+                                document.location = "admin_data_page.html"
+
 
                             } else {
-                                alert("incorrect Password and Voters id No")
+                                alert("incorrect Password and Email")
                                 //  document.location = "log_in_page.html"
                                 break;
                             }
