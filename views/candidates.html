@@ -75,6 +75,14 @@
           <option value="female">Female</option>
         </select>
       </div>
+      <div class="col-md-12">
+        <label for="Users">Type of Registration</label>
+        <select name="user" id="user" class="form-control">
+          <option value="">Select...Type</option>
+          <option value="candidates">User</option>
+          <option value="admin_table">Admin</option>
+        </select>
+      </div>
 
       <div class="col-md-12">
         <label for="state_of_origin">Sate of origin</label>
@@ -143,6 +151,14 @@
   <script src="../js/jquery.js"></script>
   <script>src = "C:\Users\kunmie\Desktop\778\election_web\js\bootstrap.min.js"</script>
   <script>
+    // function my_user(usage){
+    //   var political_party = $('#political_party')
+    //     var position_contesting_for = $('#position_contesting_for')
+    //     var party_id_number = $('#party_id_number')
+    //     if (usage == admin_table){
+    //       position_contesting_for.hide(); political_party.hide(); party_id_number.hide();
+    //     }
+    // }
     $(document).ready(function () {
       $('form').on('submit', function (e) {
         e.preventDefault();
@@ -161,9 +177,14 @@
         var position_contesting_for = $('#position_contesting_for').val();
         var party_id_number = $('#party_id_number').val();
         var profile_password = $('#profile_password').val();
+        var user = $("#user").val();
+        console.log(gender);
 
+        // if (user == "admin_table"){
+        //   position_contesting_for.hide(); political_party.hide(); party_id_number.hide();
+        // }
         $.ajax({
-          url: "http://localhost:3000/candidates",
+          url: `http://localhost:3000/${user}`,
           method: "POST",
           data: {
             first_name,
@@ -184,6 +205,7 @@
           },
         }).done(function (result) {
           console.log(result);
+          alert("Registration Successful")
 
         })
       });
